@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class gridMovement : MonoBehaviour {
 	public float speed = 2.0f;
-	public float distance = 1;
+	public float distance_x;
+	public float distance_y;
 	bool interact= false;
 	public float secondi;
 	 float secondipassati=0;
@@ -13,6 +14,10 @@ public class gridMovement : MonoBehaviour {
 	string buffer ="";
 	float cont;
 	Transform tr;
+	
+	Vector3 up1 = new Vector3(0.5f, 0.866f, 0);
+	Vector3 down1 = new Vector3(-0.5f,-0.866f , 0);
+
 
 	LayerMask lm;
 	public float rayh = 8f;
@@ -23,6 +28,7 @@ public class gridMovement : MonoBehaviour {
      	tr = transform;
 		 lm = LayerMask.NameToLayer("Ostacolo");
 		cont = 0;
+		
 	}
 	
 	// Update is called once per frame
@@ -81,19 +87,20 @@ public class gridMovement : MonoBehaviour {
 						buffer="";
 						break;
 					case "right":
-						pos += Vector3.right * distance;
+						pos += Vector3.right * distance_x;
 						buffer="";
 						break;
 					case "left":
-						pos += Vector3.left * distance;
+						pos += Vector3.left * distance_x;
 						buffer="";
 						break;
 					case "up":
-						pos += Vector3.up * distance;
+					Debug.Log(up1);
+						pos += up1 * distance_y;
 						buffer="";
 						break;
 					case "down":
-						pos += Vector3.down * distance;
+						pos += down1 * distance_y ;
 						buffer="";
 						break;
 					default:
