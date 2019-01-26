@@ -161,6 +161,16 @@ Prefab:
       propertyPath: distance
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114643898764319776, guid: 780265927b4eaaa46a02da1dcac3527c,
+        type: 2}
+      propertyPath: millisecondi
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114643898764319776, guid: 780265927b4eaaa46a02da1dcac3527c,
+        type: 2}
+      propertyPath: secondi
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 780265927b4eaaa46a02da1dcac3527c, type: 2}
   m_IsPrefabParent: 0
