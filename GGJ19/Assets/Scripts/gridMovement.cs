@@ -79,6 +79,8 @@ public class gridMovement : MonoBehaviour {
 		 //pos += Vector3.down * distance;
      } 
 
+
+
      
 
 		if(cont>=secondi){
@@ -122,6 +124,42 @@ public class gridMovement : MonoBehaviour {
 		
 		}
 		transform.position = Vector3.MoveTowards(transform.position, pos, Time.deltaTime * speed);
- }   
+ }
+ void OnTriggerEnter2D (Collider2D col)
+    {
+        if(col.gameObject.layer == 8)
+        {
+            Debug.Log("AHIA DIO BESTIA");
+            if(col.gameObject.tag == "lampadariofo")
+		        {
+		        	//col.gameObject.GetComponent<lampadariofo>().collidato=true;
+		        	//if(!col.gameObject.GetComponent<BoxCollider2D>().isTrigger){
+
+		        				//danno--;
+		            Debug.Log("AHIA DIO caprino");
+		            		//col.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+				        	//timerFermoLampadario=1f;
+		        //}
+		        }
+		        if(col.gameObject.tag == "onda"){
+		            Debug.Log("me spinge viaaa");
+
+		        }
+		       // else
+        	//danno--;
+        }
+    }
+   /*void OnTriggerExit2D(Collider2D other)
+    {
+		        	//Debug.Log("BEH DAI APPOSTO");
+    	if(other.gameObject.tag == "lampadariofo")
+		        {
+			//other.gameObject.layer = 9;
+		        	//Debug.Log("BEH DAI APPOSTO");
+            		other.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+		        	//other.gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
+		        	//this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 20;
+		        }
+    }*/
 	}
 

@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212042856892971494}
   - component: {fileID: 61633887530833250}
   - component: {fileID: 114548581312762194}
+  - component: {fileID: 114425317253402394}
   m_Layer: 9
   m_Name: Forno
   m_TagString: Untagged
@@ -36,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1126591224235018}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.414, y: -4.715, z: 0}
+  m_LocalPosition: {x: 20.89, y: -8.59, z: 0}
   m_LocalScale: {x: 0.5527122, y: 0.2295751, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -67,6 +68,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.4, y: 5.57}
   m_EdgeRadius: 0
+--- !u!114 &114425317253402394
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1126591224235018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79c4b56c1225e4bbc88a8691862876cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1000012118400646, guid: c524d7fefc6364754a7567177455fddf, type: 2}
 --- !u!114 &114548581312762194
 MonoBehaviour:
   m_ObjectHideFlags: 1
