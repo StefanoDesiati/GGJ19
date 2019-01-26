@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 64a93b7c18f7b42aa84ef330d0af50c3
+  - enabled: 1
+    path: Assets/Scenes/chungus of the hill.unity
+    guid: fe20a37e729adf64e8e13f49e07e5042
