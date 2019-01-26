@@ -15,8 +15,8 @@ public class gridMovement : MonoBehaviour {
 	Transform tr;
 
 	LayerMask lm;
-	int rayh = 2;
-	int rayv = 4;
+	public float rayh = 2;
+	public float rayv = 4;
 
 	void Start () {
 		pos = transform.position;
