@@ -98,8 +98,8 @@ public class gridMovement : MonoBehaviour {
 
 			
 		passifatti+=1;
-		Debug.Log(passifatti);
-		Debug.Log(secondipassati);
+		//Debug.Log(passifatti);
+		//Debug.Log(secondipassati);
 		cont -= secondi;
 		
 		}
