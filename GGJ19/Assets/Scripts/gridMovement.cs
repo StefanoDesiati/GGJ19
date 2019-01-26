@@ -11,10 +11,22 @@ public class gridMovement : MonoBehaviour {
 	string buffer ="";
 	float cont;
 	Transform tr;
+
+//roba raycast
+	
+	LayerMask lm;
+	int rayh = 2;
+	int rayv = 4;
+
+
 	void Start () {
 		pos = transform.position;
      	tr = transform;
+		 
 		cont = 0;
+
+		//raycast
+		lm = LayerMask.NameToLayer("Ostacolo");
 	}
 	
 	// Update is called once per frame
@@ -22,6 +34,19 @@ public class gridMovement : MonoBehaviour {
 		
 		cont=cont + 1 + Time.deltaTime;
 		Debug.Log(cont);
+
+		//raycast
+		RaycastHit2D hitD = Physics2D.Raycast(transform.position, Vector2.right, rayh, 1<<9);
+		RaycastHit2D hitA = Physics2D.Raycast(transform.position, Vector2.left, rayh, 1<<9);
+		RaycastHit2D hitW = Physics2D.Raycast(transform.position, Vector2.up, rayv, 1<<9);
+		RaycastHit2D hitS = Physics2D.Raycast(transform.position, Vector2.down, rayv, 1<<9);
+
+		if(!(hitW.collider))
+			Debug.Log("sjdhs");
+			else
+			Debug.Log(hitW.collider.gameObject.name);
+
+
 		if(Input.GetKeyDown("joystick 1 button 0")){
 			
 		buffer="interact";
