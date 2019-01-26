@@ -6,7 +6,7 @@ public class gridMovement : MonoBehaviour {
 	public float speed = 2.0f;
 	public float distance = 1;
 	bool interact= false;
-	public int centisecondi;
+	public float secondi;
 	Vector3 pos;
 	string buffer ="";
 	float cont;
@@ -47,7 +47,7 @@ public class gridMovement : MonoBehaviour {
 
      Debug.Log(pos);
 
-		if(cont>centisecondi){
+		if(cont>secondi){
 			switch (buffer)
 				{
 					case "interact":
