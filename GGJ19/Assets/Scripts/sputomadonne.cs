@@ -35,7 +35,8 @@ public float speed = 2.0f;
 		RaycastHit2D hitD = Physics2D.Raycast(transform.position, Vector2.right, rayh, 1<<9);
 			if(!(hitD.collider))
          		pos += Vector3.right * distance;
-         	//if(hitD.collider.gameObject.Layer )
+         	else //if(hitD.collider.gameObject.layer==10)
+         		Debug.Log(hitD.collider.gameObject.layer);
      }
      else if (Input.GetAxis("Horizontal")<-0.8f && tr.position == pos) {
 		RaycastHit2D hitA = Physics2D.Raycast(transform.position, Vector2.left, rayh, 1<<9);
