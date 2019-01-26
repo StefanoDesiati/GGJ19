@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class main_movement : MonoBehaviour {
 	bool inv = false;
-	
+	public float cooldown;
+	float cd;
 	public Sprite inv_main;
 	public Sprite main;
 	SpriteRenderer sprite1;
@@ -15,14 +16,16 @@ public class main_movement : MonoBehaviour {
 
 	void Start () {
 		  sprite1 = gameObject.GetComponent<SpriteRenderer>();
-		  
+		  cd = -1;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	if (Input.GetKeyDown("joystick 1 button 0") & (inv==false)    ){
+	if (Input.GetKeyDown("joystick 1 button 0") & (inv==false) & (cd < 0)   ){
 		timeLeft=inv_timer;
+		cd=cooldown;
 		inv=true;
+
 	}
 
 	if (inv ==true){
@@ -39,5 +42,7 @@ public class main_movement : MonoBehaviour {
 	} else {
 			transform.position += new Vector3(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical"), 0)/7;
 			}
+	if(cd>=0)
+	cd -= Time.deltaTime;
 	}
 }
