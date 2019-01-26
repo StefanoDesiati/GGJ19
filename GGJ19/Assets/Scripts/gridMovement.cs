@@ -16,7 +16,14 @@ public class gridMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetAxis("Horizontal")>0.8f && tr.position == pos ) {
+
+		if(Input.GetKeyDown("joystick 1 button 0")){
+			
+			pos += Vector3.back;
+
+		}
+
+		else if (Input.GetAxis("Horizontal")>0.8f && tr.position == pos ) {
 		
          pos += Vector3.right * distance;
      }
@@ -28,8 +35,8 @@ public class gridMovement : MonoBehaviour {
      }
      else if (Input.GetAxis("Vertical")<-0.8f && tr.position == pos) {
          pos += Vector3.down * distance;
-     }
-     
+     } 
+     Debug.Log(pos);
      transform.position = Vector3.MoveTowards(transform.position, pos, Time.deltaTime * speed);
  }   
 	}
