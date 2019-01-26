@@ -43,8 +43,8 @@ public class invulnerabilità : MonoBehaviour {
 			//sprite1.sprite=main;
 			//scale = new Vector3( 0.6629f, 0.4366f, 1f );
 			//transform.localScale = scale;
-			if (transform.childCount > 0){
-			 Destroy(transform.GetChild(0).gameObject);
+			if (transform.childCount > 1){
+			 Destroy(transform.GetChild(1).gameObject);
 			}
 			inv = false;
 			}
