@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -59,4 +60,3 @@ public class gridobestemmie : MonoBehaviour {
      transform.position = Vector3.MoveTowards(transform.position, pos, Time.deltaTime * speed);
  }   
 	}
-
