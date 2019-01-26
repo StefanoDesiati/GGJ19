@@ -107,6 +107,7 @@
      <Compile Include="Assets\Scripts\forno.cs" />
      <Compile Include="Assets\Scripts\framrate.cs" />
      <Compile Include="Assets\Scripts\gridMovement.cs" />
+     <Compile Include="Assets\Scripts\invulnerabilità.cs" />
      <Compile Include="Assets\Scripts\lampadariofo.cs" />
      <Compile Include="Assets\Scripts\main_movement.cs" />
      <Compile Include="Assets\Scripts\nothing.cs" />
