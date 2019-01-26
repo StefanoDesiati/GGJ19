@@ -523,6 +523,11 @@ Prefab:
       propertyPath: m_Name
       value: Chungus 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114950385839327024, guid: f1a599ce6792a1c439682b239d9eed22,
+        type: 2}
+      propertyPath: pov
+      value: 
+      objectReference: {fileID: 98411705}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f1a599ce6792a1c439682b239d9eed22, type: 2}
   m_IsPrefabParent: 0
