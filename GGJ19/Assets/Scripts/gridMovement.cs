@@ -11,9 +11,15 @@ public class gridMovement : MonoBehaviour {
 	string buffer ="";
 	float cont;
 	Transform tr;
+
+	LayerMask lm;
+	int rayh = 2;
+	int rayv = 4;
+
 	void Start () {
 		pos = transform.position;
      	tr = transform;
+		 lm = LayerMask.NameToLayer("Ostacolo");
 		cont = 0;
 	}
 	
@@ -29,18 +35,26 @@ public class gridMovement : MonoBehaviour {
 		}
 
 		else if (Input.GetAxis("Horizontal")>0.8f && tr.position == pos ) {
+			RaycastHit2D hitD = Physics2D.Raycast(transform.position, Vector2.right, rayh, 1<<9);
+			if(!(hitD.collider))
 		buffer="right";
         // pos += Vector3.right * distance;
      }
      else if (Input.GetAxis("Horizontal")<-0.8f && tr.position == pos) {
+		 RaycastHit2D hitA = Physics2D.Raycast(transform.position, Vector2.left, rayh, 1<<9);
+			if(!(hitA.collider))
          buffer="left";
 		 //pos += Vector3.left * distance;
      }
      else if (Input.GetAxis("Vertical")>0.8f && tr.position == pos) {
+		 RaycastHit2D hitW = Physics2D.Raycast(transform.position, Vector2.up, rayv, 1<<9);
+			if(!(hitW.collider))
         buffer="up";
 		 //pos += Vector3.up * distance;
      }
      else if (Input.GetAxis("Vertical")<-0.8f && tr.position == pos) {
+		 RaycastHit2D hitS = Physics2D.Raycast(transform.position, Vector2.down, rayv, 1<<9);
+			if(!(hitS.collider))
          buffer="down";
 		 //pos += Vector3.down * distance;
      } 
