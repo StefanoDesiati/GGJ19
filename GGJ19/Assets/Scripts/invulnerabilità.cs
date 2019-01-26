@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class invulnerabilità : MonoBehaviour {
-	bool inv = false;
+	public static bool inv = false;
 	public GameObject cover;
 	public float cooldown;
 	public float cooldown_fake;
