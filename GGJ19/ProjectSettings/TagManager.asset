@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - fiammasaviana
   layers:
   - Default
   - TransparentFX
@@ -38,12 +39,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: map
     uniqueID: 2447393697
     locked: 0
-  - name: main
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: forniture
     uniqueID: 3338268023
+    locked: 0
+  - name: main
+    uniqueID: 2540014567
     locked: 0
