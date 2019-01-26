@@ -59,8 +59,8 @@ if((timeLeft_fake<0) &(inv==false)){
 		//	scale = new Vector3( 0.6629f, 0.4366f, 1f );
 		//	transform.localScale = scale;
 		//	spritebase.size=actualSize.size;
-		if (transform.childCount > 0)
-		 Destroy(transform.GetChild(0).gameObject);
+		if (transform.childCount > 1)
+		 Destroy(transform.GetChild(1).gameObject);
 	}else{
 
 	
