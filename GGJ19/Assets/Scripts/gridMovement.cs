@@ -7,6 +7,7 @@ public class gridMovement : MonoBehaviour {
 	public float distance = 1;
 	bool interact= false;
 	public float secondi;
+	public float secondipassati=0;
 	Vector3 pos;
 	string buffer ="";
 	float cont;
@@ -27,7 +28,8 @@ public class gridMovement : MonoBehaviour {
 	void Update () {
 		
 		cont=cont + Time.deltaTime;
-		Debug.Log(cont);
+		secondipassati+= Time.deltaTime;
+		Debug.Log(secondipassati);
 		if(Input.GetKeyDown("joystick 1 button 0")){
 			
 		buffer="interact";
@@ -59,7 +61,7 @@ public class gridMovement : MonoBehaviour {
 		 //pos += Vector3.down * distance;
      } 
 
-     Debug.Log(pos);
+     
 
 		if(cont>secondi){
 			switch (buffer)
