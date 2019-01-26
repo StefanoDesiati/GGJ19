@@ -24,6 +24,10 @@ public class main_movement : MonoBehaviour {
 	float timeLeft_fake;
 
 
+	int danno = 3;
+	float timerFermoLampadario = -1f;
+
+
 	void Start () {
 		 // sprite1 = gameObject.GetComponent<SpriteRenderer>();
 		  cd = -1;
@@ -32,7 +36,8 @@ public class main_movement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position += new Vector3(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical"), 0)/7;
+		if(timerFermoLampadario<0)
+			transform.position += new Vector3(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical"), 0)/7;
 	if (Input.GetKeyDown("joystick 1 button 0") & (inv==false) & (cd < 0)   ){
 		timeLeft=inv_timer;
 		cd=cooldown;
@@ -58,6 +63,11 @@ public class main_movement : MonoBehaviour {
 			inv = false;
 			}
 	} 
+	if(timerFermoLampadario>=0)
+	timerFermoLampadario -= Time.deltaTime;
+
+	if(danno==0)
+		Debug.Log("ue fra sei morto");
 	//else {
 	//		
 	//		}
@@ -113,4 +123,33 @@ if (Input.GetKeyDown("joystick 1 button 1")){
 		}
 
 	}
+	void OnTriggerEnter2D (Collider2D col)
+    {
+        if(col.gameObject.layer == 8)
+        {
+            Debug.Log("AHIA DIO BESTIA");
+            if(col.gameObject.tag == "Lampadariofo")
+		        {
+		        	if(!col.gameObject.GetComponent<BoxCollider2D>().isTrigger){
+
+		        				danno--;
+		            Debug.Log("AHIA DIO caprino");
+		            		//col.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+				        	timerFermoLampadario=1f;
+		        }
+		        }
+		        else
+        	danno--;
+        }
+    }void OnTriggerExit2D(Collider2D other)
+    {
+		        	Debug.Log("BEH DAI APPOSTO");
+    	if(other.gameObject.tag == "lampadariofo")
+		        {
+		        	Debug.Log("BEH DAI APPOSTO");
+            		other.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+		        	other.gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
+		        	this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 20;
+		        }
+    }
 }
