@@ -20,7 +20,7 @@ public class gridMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		cont=cont + 1 + Time.deltaTime;
+		cont=cont + Time.deltaTime;
 		Debug.Log(cont);
 		if(Input.GetKeyDown("joystick 1 button 0")){
 			

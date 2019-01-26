@@ -105,8 +105,8 @@
      <Compile Include="Assets\Scripts\choose_chara.cs" />
      <Compile Include="Assets\Scripts\fiammasaviana.cs" />
      <Compile Include="Assets\Scripts\forno.cs" />
+     <Compile Include="Assets\Scripts\framrate.cs" />
      <Compile Include="Assets\Scripts\gridMovement.cs" />
-     <Compile Include="Assets\Scripts\gridobestemmie.cs" />
      <Compile Include="Assets\Scripts\lampadariofo.cs" />
      <Compile Include="Assets\Scripts\main_movement.cs" />
      <Compile Include="Assets\Scripts\nothing.cs" />
