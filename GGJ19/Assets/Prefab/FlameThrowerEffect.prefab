@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4000012574599744}
   - component: {fileID: 33000014080134790}
   - component: {fileID: 23000010443049052}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4000010258414818}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 4000012852158044}
   - component: {fileID: 33000012768057306}
   - component: {fileID: 23000010690779862}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 4000013158885626}
   - component: {fileID: 198000014052238036}
   - component: {fileID: 199000012675287934}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FireEmbers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 4000010171797510}
   - component: {fileID: 198000014016860652}
   - component: {fileID: 199000010739196718}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Flames
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 4000010147439154}
   - component: {fileID: 198000010778961324}
   - component: {fileID: 199000011313787480}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IgnitionFlame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 4000013285487154}
   - component: {fileID: 114347378008380692}
   - component: {fileID: 61864754103666900}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FlameThrowerEffect
   m_TagString: fiammasaviana
   m_Icon: {fileID: 0}
@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 4000013838195304}
   - component: {fileID: 33000011172757102}
   - component: {fileID: 23000012188220892}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 4000010378864444}
   - component: {fileID: 33000012993176672}
   - component: {fileID: 23000011394590030}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 4000011397314502}
   - component: {fileID: 33000012351605910}
   - component: {fileID: 23000010146937248}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 4000011157428156}
   - component: {fileID: 33000011942672142}
   - component: {fileID: 23000013226861782}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 4841533853500568}
   - component: {fileID: 198081783192839074}
   - component: {fileID: 199783316386001408}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}

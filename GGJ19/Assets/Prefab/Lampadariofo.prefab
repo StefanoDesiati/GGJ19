@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 61364792193824882}
   m_Layer: 8
   m_Name: Lampadariofo
-  m_TagString: fiammasaviana
+  m_TagString: lampadariofo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,10 +48,10 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1219795097228368}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -109,9 +109,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -956699273
-  m_SortingLayer: 1
-  m_SortingOrder: -1
+  m_SortingLayerID: -1754952729
+  m_SortingLayer: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 7d702754013614c38ba93862d40afd12, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.3647059}
   m_FlipX: 0

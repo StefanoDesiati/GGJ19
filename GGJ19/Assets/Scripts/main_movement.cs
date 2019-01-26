@@ -128,15 +128,16 @@ if (Input.GetKeyDown("joystick 1 button 1")){
         if(col.gameObject.layer == 8)
         {
             Debug.Log("AHIA DIO BESTIA");
-            if(col.gameObject.tag == "Lampadariofo")
+            if(col.gameObject.tag == "lampadariofo")
 		        {
-		        	if(!col.gameObject.GetComponent<BoxCollider2D>().isTrigger){
+		        	col.gameObject.GetComponent<lampadariofo>().collidato=true;
+		        	//if(!col.gameObject.GetComponent<BoxCollider2D>().isTrigger){
 
 		        				danno--;
 		            Debug.Log("AHIA DIO caprino");
 		            		//col.gameObject.GetComponent<BoxCollider2D>().enabled = false;
 				        	timerFermoLampadario=1f;
-		        }
+		        //}
 		        }
 		        else
         	danno--;
