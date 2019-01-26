@@ -15,7 +15,7 @@ public class gridMovement : MonoBehaviour {
 	Transform tr;
 
 	LayerMask lm;
-	public float rayh = 2;
+	public float rayh = 8f;
 	public float rayv = 4;
 
 	void Start () {
@@ -41,24 +41,32 @@ public class gridMovement : MonoBehaviour {
 			RaycastHit2D hitD = Physics2D.Raycast(transform.position, Vector2.right, rayh, 1<<9);
 			if(!(hitD.collider))
 		buffer="right";
+		else if(hitD.collider.gameObject.tag == "porta")
+			Debug.Log("eureka");
         // pos += Vector3.right * distance;
      }
      else if (Input.GetAxis("Horizontal")<-0.8f && tr.position == pos) {
 		 RaycastHit2D hitA = Physics2D.Raycast(transform.position, Vector2.left, rayh, 1<<9);
 			if(!(hitA.collider))
          buffer="left";
+		else if(hitA.collider.gameObject.tag == "porta")
+			Debug.Log("eureka");
 		 //pos += Vector3.left * distance;
      }
      else if (Input.GetAxis("Vertical")>0.8f && tr.position == pos) {
 		 RaycastHit2D hitW = Physics2D.Raycast(transform.position, Vector2.up, rayv, 1<<9);
 			if(!(hitW.collider))
         buffer="up";
+		else if(hitW.collider.gameObject.tag == "porta")
+			Debug.Log("eureka");
 		 //pos += Vector3.up * distance;
      }
      else if (Input.GetAxis("Vertical")<-0.8f && tr.position == pos) {
 		 RaycastHit2D hitS = Physics2D.Raycast(transform.position, Vector2.down, rayv, 1<<9);
 			if(!(hitS.collider))
          buffer="down";
+		else if(hitS.collider.gameObject.tag == "porta")
+			Debug.Log("eureka");
 		 //pos += Vector3.down * distance;
      } 
 

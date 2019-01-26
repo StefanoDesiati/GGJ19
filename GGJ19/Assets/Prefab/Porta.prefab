@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4744885418271566}
   - component: {fileID: 212762301641271124}
   - component: {fileID: 61273720814687132}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Porta
-  m_TagString: Untagged
+  m_TagString: porta
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,7 +35,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1354146209959130}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11, y: -0.69, z: -0.39357135}
+  m_LocalPosition: {x: 10.31, y: -1.3, z: -0.39357135}
   m_LocalScale: {x: 0.03, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
