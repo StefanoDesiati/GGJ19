@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 114652903876612598}
   - component: {fileID: 61461012418937856}
   - component: {fileID: 50902980724874214}
-  - component: {fileID: 114784703658448582}
   m_Layer: 0
   m_Name: Chungus 1
   m_TagString: Untagged
@@ -95,7 +94,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1245229468553486}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6fe87eb7486e88c4dae56f126ea479e6, type: 3}
   m_Name: 
@@ -106,19 +105,6 @@ MonoBehaviour:
   inv_main: {fileID: 21300000, guid: 8269ed3676988904a96fb40c8a9275ec, type: 3}
   main: {fileID: 21300000, guid: e33aac836f011e048b887959a7adbfdf, type: 3}
   inv_timer: 1.2
---- !u!114 &114784703658448582
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1245229468553486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3c9571edf5521240807afbf1d47425f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  distance: 1
 --- !u!212 &212702428614868132
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -19,7 +19,7 @@ public class gridMovement : MonoBehaviour {
 
 		if(Input.GetKeyDown("joystick 1 button 0")){
 			
-			pos += Vector3.back;
+			pos = Vector3.back;
 
 		}
 
