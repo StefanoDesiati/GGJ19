@@ -45,4 +45,11 @@ public class main_movement : MonoBehaviour {
 	if(cd>=0)
 	cd -= Time.deltaTime;
 	}
+		void OnTriggerEnter2D (Collider2D col)
+    {
+        if(col.gameObject.tag == "fiammasaviana")
+        {
+            Debug.Log("AHIA DIO BESTIA");
+        }
+    }
 }
