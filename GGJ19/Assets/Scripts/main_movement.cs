@@ -36,6 +36,7 @@ public class main_movement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		Debug.Log(Input.GetAxis("Horizontal"));
 		if(timerFermoLampadario<0)
 			transform.position += new Vector3(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical"), 0)/7;
 	if (Input.GetKeyDown("joystick 1 button 0") & (inv==false) & (cd < 0)   ){
