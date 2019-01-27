@@ -6,7 +6,7 @@ public class fiammasaviana : MonoBehaviour {
 	float time = 1;
 	// Use this for initialization
 	void Start () {
-		transform.localEulerAngles = new Vector3(0,0,-90);
+		transform.localEulerAngles = new Vector3(0,0,-180);
 	}
 	
 	// Update is called once per frame

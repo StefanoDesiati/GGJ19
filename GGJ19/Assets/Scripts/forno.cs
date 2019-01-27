@@ -15,7 +15,8 @@ public class forno : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown("joystick 2 button 2")&&(cd<=0)){
 			cd=cooldown;
-			Instantiate(prefab, transform.position, Quaternion.identity);
+			
+			Instantiate(prefab, transform.position + new Vector3(-1,0,0), Quaternion.identity);
 		}
 		if(cd>0)
 		cd-=Time.deltaTime;
