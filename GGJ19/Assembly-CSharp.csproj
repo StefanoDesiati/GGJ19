@@ -105,6 +105,7 @@
      <Compile Include="Assets\Scintilla.cs" />
      <Compile Include="Assets\ScintillaVita.cs" />
      <Compile Include="Assets\Scripts\choose_chara.cs" />
+     <Compile Include="Assets\Scripts\danni.cs" />
      <Compile Include="Assets\Scripts\Espansione.cs" />
      <Compile Include="Assets\Scripts\fiammasaviana.cs" />
      <Compile Include="Assets\Scripts\forno.cs" />
