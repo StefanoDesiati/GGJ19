@@ -52,7 +52,7 @@ public class lampadariofo : MonoBehaviour {
 		}
 		if(scompari && timeDesa<0){
 			Debug.Log("c");
-			this.gameObject.SetActive(false);
+			this.gameObject.transform.parent.gameObject.SetActive(false);
 		}
 
 		Debug.Log(timeDesa);
