@@ -117,6 +117,7 @@
      <Compile Include="Assets\Scripts\sputomadonne.cs" />
      <Compile Include="Assets\Scripts\start.cs" />
      <Compile Include="Assets\Scripts\Subwoofer.cs" />
+     <Compile Include="Assets\Scripts\woofCloud.cs" />
      <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
      <None Include="Assets\PostProcessing\Resources\Shaders\Fog.shader" />

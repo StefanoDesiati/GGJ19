@@ -9,122 +9,81 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1668504447125234}
+  m_RootGameObject: {fileID: 1594812720168906}
   m_IsPrefabParent: 1
---- !u!1 &1668504447125234
+--- !u!1 &1594812720168906
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4221972309051560}
-  - component: {fileID: 212699785041955546}
-  - component: {fileID: 114350176249931086}
-  - component: {fileID: 61742718110331958}
-  - component: {fileID: 50749483963113876}
-  - component: {fileID: 114643898764319776}
+  - component: {fileID: 4284199064725572}
+  - component: {fileID: 212818256100371212}
+  - component: {fileID: 61783462104887630}
+  - component: {fileID: 114611137120764570}
   m_Layer: 0
-  m_Name: Chungus 2
+  m_Name: blue-cloud-PNG-transparent-thumb26 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4221972309051560
+--- !u!4 &4284199064725572
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1668504447125234}
+  m_GameObject: {fileID: 1594812720168906}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.73, y: -0.58, z: 0}
-  m_LocalScale: {x: 0.66291326, y: 0.43666366, z: 1}
+  m_LocalPosition: {x: -3.0319636, y: -2.4139283, z: 0}
+  m_LocalScale: {x: 0.35809278, y: 0.29531118, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50749483963113876
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1668504447125234}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!61 &61742718110331958
+--- !u!61 &61783462104887630
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1668504447125234}
+  m_GameObject: {fileID: 1594812720168906}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00000047683716, y: -3.5567327}
+  m_Offset: {x: -0.08587241, y: 0.11468035}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.59, y: 8.77}
-    newSize: {x: 4.59, y: 8.77}
+    oldSize: {x: 8, y: 6}
+    newSize: {x: 8, y: 6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.3560343, y: 1.4794114}
+  m_Size: {x: 2.1769757, y: 2.1169276}
   m_EdgeRadius: 0
---- !u!114 &114350176249931086
+--- !u!114 &114611137120764570
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1668504447125234}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fe87eb7486e88c4dae56f126ea479e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cover: {fileID: 1039514460417546, guid: 97d4d25b12c88114ba9ce2382b87fe31, type: 2}
-  cooldown: 6
-  cooldown_fake: 6
-  inv_main: {fileID: 21300000, guid: 8269ed3676988904a96fb40c8a9275ec, type: 3}
-  main: {fileID: 21300000, guid: e33aac836f011e048b887959a7adbfdf, type: 3}
-  inv_timer: 1.2
---- !u!114 &114643898764319776
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1668504447125234}
+  m_GameObject: {fileID: 1594812720168906}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3c9571edf5521240807afbf1d47425f, type: 3}
+  m_Script: {fileID: 11500000, guid: ad6ea0759b4e55a4abc7b923fe534166, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  distance: 3
---- !u!212 &212699785041955546
+--- !u!212 &212818256100371212
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1668504447125234}
+  m_GameObject: {fileID: 1594812720168906}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -150,15 +109,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1754952729
-  m_SortingLayer: 2
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e33aac836f011e048b887959a7adbfdf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 50f67bbfda599b844b94e3d2989ab3b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.59, y: 8.77}
+  m_Size: {x: 8, y: 6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

@@ -11,7 +11,7 @@ public class gridMovement : MonoBehaviour {
 	public float secondi;
 	 float secondipassati=0;
 	int passifatti=0;
-	Vector3 pos;
+	public Vector3 pos;
 	string buffer ="";
 	float cont;
 	Transform tr;
@@ -100,7 +100,7 @@ public class gridMovement : MonoBehaviour {
 						buffer="";
 						break;
 					case "up":
-					Debug.Log(up1);
+					
 						pos += up1 * distance_y;
 						buffer="";
 						break;
