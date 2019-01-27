@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class invulnerabilità : MonoBehaviour {
-	public static bool inv = false;
+	public bool inv = false;
 	public GameObject cover;
-	public float cooldown;
-	public float cooldown_fake;
+	public bool avaiability = true;
+	public bool avaiability_fake = true;
 	float cd;
 
 	float cd_fake;
@@ -18,43 +18,51 @@ public class invulnerabilità : MonoBehaviour {
 	float timeLeft_fake;
 	// Use this for initialization
 	void Start () {
-		cd = -1;
+		
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
-		if (Input.GetKeyDown("joystick 1 button 0") & (inv==false) & (cd < 0)   ){
-		timeLeft=inv_timer;
-		cd=cooldown;
+		if (Input.GetKeyDown("joystick 1 button 0") && (avaiability==true)     ){
+		Debug.Log("AAAAAAAA");
 		Instantiate(cover, transform);
+		Debug.Log("DOVREI AVER CREATO");
+		timeLeft=inv_timer;
+		avaiability=false;
+		
 		inv=true;
 
-	}
-	if (inv ==true){
+	} 
+	 if (inv==true){
 		
 		//sprite1.sprite=inv_main;
 		// scale = new Vector3( 1.8f, 1.4f, 1f );
     	//transform.localScale = scale;
 
 		timeLeft -= Time.deltaTime;
+		Debug.Log(timeLeft);
 		if(timeLeft < 0){
+			
 			//sprite1.sprite=main;
 			//scale = new Vector3( 0.6629f, 0.4366f, 1f );
 			//transform.localScale = scale;
 			if (transform.childCount > 1){
+				
 			 Destroy(transform.GetChild(1).gameObject);
+			 inv = false;
 			}
-			inv = false;
+			
 			}
 	}
 
 if (Input.GetKeyDown("joystick 1 button 1")){
-	inv_fake(cd_fake, inv);
+	inv_fake(inv);
 
 }
-if((timeLeft_fake<0) &(inv==false)){
+if((timeLeft_fake<0)&&(inv==false)){
+	
 		//sprite1.sprite=main;
 		//	scale = new Vector3( 0.6629f, 0.4366f, 1f );
 		//	transform.localScale = scale;
@@ -67,21 +75,18 @@ if((timeLeft_fake<0) &(inv==false)){
 	timeLeft_fake-=Time.deltaTime;
 	}
 
-if(cd>=0)
-	cd -= Time.deltaTime;
 
-	if(cd_fake>=0)
-	cd_fake -=Time.deltaTime;
 	}
 
 
-void inv_fake (float cd_fakeCheck, bool inv){
-		if( (inv==false) & (cd_fakeCheck < 0)){
+void inv_fake (bool inv){
+		if( (inv==false)&&(avaiability_fake==true)){
+			
 			//sprite1.sprite=inv_main;
 		//	Vector3 scale = new Vector3( 1.8f, 1.4f, 1f );
     	//	transform.localScale = scale;
 			Instantiate(cover, transform);
-			cd_fake=cooldown_fake;
+			avaiability_fake=false;;
 			timeLeft_fake=inv_timer;
 		}
 

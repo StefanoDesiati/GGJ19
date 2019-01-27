@@ -14,7 +14,7 @@ public class Scintilla : MonoBehaviour {
 	void Update () {
 		spawn -= Time.deltaTime;
 		if(spawn<0){
-			Instantiate(prefab, transform.position, Quaternion.identity);
+			Instantiate(prefab, transform.position + new Vector3(0.5f,0.65f,0), Quaternion.identity);
 			spawn += 3f;
 		}
 	}

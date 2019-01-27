@@ -42,46 +42,49 @@ public class gridMovement : MonoBehaviour {
 		cont=cont + Time.deltaTime;
 		secondipassati+= Time.deltaTime;
 		
-		if(Input.GetKeyDown("joystick 1 button 0")){
+		if(Input.GetKeyDown("joystick 1 button 2")){
+			Debug.Log("HAI PREMUTO X");
 			
 		buffer="interact";
 
-		}
-
-		else if (Input.GetAxis("Horizontal")>0.8f && tr.position == pos ) {
-			RaycastHit2D hitD = Physics2D.Raycast(pov.position, Vector2.right, distance_x, 1<<9);
-			if(!(hitD.collider))
-		buffer="right";
-		else if(hitD.collider.gameObject.tag == "porta")
-			Debug.Log("eureka");
-			else
-				Debug.Log("ROBERTO SAVIANO");
-        // pos += Vector3.right * distance;
-     }
-     else if (Input.GetAxis("Horizontal")<-0.8f && tr.position == pos) {
-		 RaycastHit2D hitA = Physics2D.Raycast(pov.position, Vector2.left, distance_x, 1<<9);
-			if(!(hitA.collider))
-         buffer="left";
-		else if(hitA.collider.gameObject.tag == "porta")
-			Debug.Log("eureka");
-		 //pos += Vector3.left * distance;
-     }
-     else if (Input.GetAxis("Vertical")>0.8f && tr.position == pos) {
+		}else if (Input.GetAxis("VerticalMain")>0.8f && tr.position == pos) {
 		 RaycastHit2D hitW = Physics2D.Raycast(pov.position, up1, distance_y, 1<<9);
 			if(!(hitW.collider))
         buffer="up";
 		else if(hitW.collider.gameObject.tag == "porta")
-			Debug.Log("eureka");
+			eureka();
 		 //pos += Vector3.up * distance;
      }
-     else if (Input.GetAxis("Vertical")<-0.8f && tr.position == pos) {
+	 else if (Input.GetAxis("VerticalMain")<-0.8f && tr.position == pos) {
 		 RaycastHit2D hitS = Physics2D.Raycast(pov.position, down1, distance_y, 1<<9);
 			if(!(hitS.collider))
          buffer="down";
 		else if(hitS.collider.gameObject.tag == "porta")
-			Debug.Log("eureka");
+			eureka();
 		 //pos += Vector3.down * distance;
      } 
+
+		else if (Input.GetAxis("HorizontalMain")>0.8f && tr.position == pos ) {
+			RaycastHit2D hitD = Physics2D.Raycast(pov.position, Vector2.right, distance_x, 1<<9);
+			if(!(hitD.collider))
+		buffer="right";
+		else if(hitD.collider.gameObject.tag == "porta")
+			eureka();
+			else
+				Debug.Log("ROBERTO SAVIANO");
+        // pos += Vector3.right * distance;
+     }
+     else if (Input.GetAxis("HorizontalMain")<-0.8f && tr.position == pos) {
+		 RaycastHit2D hitA = Physics2D.Raycast(pov.position, Vector2.left, distance_x, 1<<9);
+			if(!(hitA.collider))
+         buffer="left";
+		else if(hitA.collider.gameObject.tag == "porta")
+		eureka();
+			
+		 //pos += Vector3.left * distance;
+     }
+     
+     
 
 
 
@@ -166,5 +169,13 @@ public class gridMovement : MonoBehaviour {
 		        	//this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 20;
 		        }
     }*/
+
+	void eureka(){
+		Transform camerapos;
+		GameObject[] camera=  GameObject.FindGameObjectsWithTag("MainCamera");
+		camerapos = camera[0].transform;
+		 camerapos.position = new Vector3(19.2f, 0, -10);
+		 camera[0].transform.position = Vector3.MoveTowards(camera[0].transform.position, camerapos.position, Time.deltaTime * 0.0000001f);
+	}
 	}
 
