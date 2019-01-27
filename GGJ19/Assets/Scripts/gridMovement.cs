@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class gridMovement : MonoBehaviour {
+	bool triggerato =false;
 	public float speed = 2.0f;
 	public float distance_x;
 	public float distance_y;
@@ -29,6 +30,7 @@ public class gridMovement : MonoBehaviour {
 	danni danno;
 
 	void Start () {
+		
 		pos = transform.position;
      	tr = transform;
 		 lm = LayerMask.NameToLayer("Ostacolo");
@@ -38,9 +40,9 @@ public class gridMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(foundcamera == null){
-
-		Debug.Log(Input.GetAxis("Scossa"));
+		if(foundcamera==null){
+		
+		
 		cont=cont + Time.deltaTime;
 		secondipassati+= Time.deltaTime;
 		
@@ -54,15 +56,15 @@ public class gridMovement : MonoBehaviour {
 			if(!(hitW.collider))
         buffer="up";
 		else if(hitW.collider.gameObject.tag == "porta")
-			foundcamera=eureka();
+			foundcamera =eureka();
 		 //pos += Vector3.up * distance;
      }
-	 else if (Input.GetAxis("VerticalMain")<-0.8f && tr.position == pos) {
+	 else if (Input .GetAxis("VerticalMain")<-0.8f && tr.position == pos) {
 		 RaycastHit2D hitS = Physics2D.Raycast(pov.position, down1, distance_y, 1<<9);
 			if(!(hitS.collider))
          buffer="down";
 		else if(hitS.collider.gameObject.tag == "porta")
-			foundcamera=eureka();
+		foundcamera =	eureka();
 		 //pos += Vector3.down * distance;
      } 
 
@@ -71,7 +73,7 @@ public class gridMovement : MonoBehaviour {
 			if(!(hitD.collider))
 		buffer="right";
 		else if(hitD.collider.gameObject.tag == "porta")
-			foundcamera=eureka();
+		foundcamera =	eureka();
 			else
 				Debug.Log("ROBERTO SAVIANO");
         // pos += Vector3.right * distance;
@@ -81,7 +83,7 @@ public class gridMovement : MonoBehaviour {
 			if(!(hitA.collider))
          buffer="left";
 		else if(hitA.collider.gameObject.tag == "porta")
-		foundcamera=eureka();
+		foundcamera =eureka();
 			
 		 //pos += Vector3.left * distance;
      }
@@ -130,16 +132,14 @@ public class gridMovement : MonoBehaviour {
 		//Debug.Log(passifatti);
 		//Debug.Log(secondipassati);
 		cont -= secondi;
-		
+
 		}
 		transform.position = Vector3.MoveTowards(transform.position, pos, Time.deltaTime * speed);
-
 		}else{
-		while (foundcamera.transform.position!=new Vector3(19.2f,0 -10)){
-		foundcamera.transform.position = Vector3.MoveTowards(foundcamera.transform.position, new Vector3(19.2f, 0, -10), Time.deltaTime);
+			if (foundcamera!=null)
+			foundcamera.transform.position = Vector3.Lerp(foundcamera.transform.position, new Vector3(19.2f, 0, -10), Time.deltaTime);
 		}
-		foundcamera=null;
-		}
+		
  }
  void OnTriggerEnter2D (Collider2D col)
     {
@@ -184,8 +184,10 @@ public class gridMovement : MonoBehaviour {
 		GameObject[] camera=  GameObject.FindGameObjectsWithTag("MainCamera");
 		camerapos = camera[0].transform;
 		 camerapos.position = new Vector3(19.2f, 0, -10);
+		 camera[0].transform.position = Vector3.MoveTowards(camera[0].transform.position, camerapos.position, Time.deltaTime);
 		 return camera[0];
-		 //camera[0].transform.position = Vector3.MoveTowards(camera[0].transform.position, camerapos.position, Time.deltaTime);
+		//this.transform.position=new Vector3(11.60f, -3.35f, 0);
+		//pos=new Vector3(12.30f, -3.35f, 0);
 	}
 	}
 
