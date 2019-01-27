@@ -7,7 +7,7 @@ public class start : MonoBehaviour {
 
 	// Use this for initialization
 	public void doStart(){
-        SceneManager.LoadScene("chungus of the hill");
+        SceneManager.LoadScene("level");
 
 	}
 }

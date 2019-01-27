@@ -11,7 +11,7 @@ public class forno : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown("space")){
+		if (Input.GetKeyDown("joystick 2 button 2")){
 			Instantiate(prefab, transform.position, Quaternion.identity);
 		}
 	}

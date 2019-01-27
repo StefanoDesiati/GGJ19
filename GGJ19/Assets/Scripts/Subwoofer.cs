@@ -10,14 +10,15 @@ public class Subwoofer : MonoBehaviour {
 	public GameObject cloud;
 	// Use this for initialization
 	void Start () {
-		cd = countdown;
+		cd = 0f;
 		activity = 0f;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown("space") & cd>=countdown){
+		if (Input.GetKeyDown("joystick 2 button 1") & cd<=0 & activity <=0){
 			activity=duration;
+			cd = countdown;
 			Instantiate(cloud,  this.gameObject.transform.GetChild(0).position, Quaternion.identity,  this.gameObject.transform.GetChild(0).transform);
 			Instantiate(cloud,  this.gameObject.transform.GetChild(1).position, Quaternion.identity, this.gameObject.transform.GetChild(1).transform);
 			Instantiate(cloud,  this.gameObject.transform.GetChild(2).position, Quaternion.identity, this.gameObject.transform.GetChild(2).transform);
@@ -35,8 +36,8 @@ public class Subwoofer : MonoBehaviour {
  			}
 		
 
-		if (cd < countdown){
-			cd+=Time.deltaTime;
+		if (cd > 0){
+			cd-=Time.deltaTime;
 		}
 	}
 }

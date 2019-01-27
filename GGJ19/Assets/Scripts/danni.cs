@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class danni : MonoBehaviour {
 	public GameObject fegato2;
@@ -17,7 +18,7 @@ public class danni : MonoBehaviour {
 				fegato2.SetActive(false);
 			break;
 			case 0:
-				//game over
+        		SceneManager.LoadScene("loser");
 			break;
 		}
 	}

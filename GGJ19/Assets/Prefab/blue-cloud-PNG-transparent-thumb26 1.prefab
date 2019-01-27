@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212818256100371212}
   - component: {fileID: 61783462104887630}
   - component: {fileID: 114611137120764570}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: blue-cloud-PNG-transparent-thumb26 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

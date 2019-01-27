@@ -24,7 +24,7 @@ public class lampadariofo : MonoBehaviour {
 
 			}
 		}*/
-		if (Input.GetKeyDown("space")){
+		if (Input.GetKeyDown("joystick 2 button 3")){
 			this.gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,1f);
 			this.gameObject.GetComponent<BoxCollider2D>().enabled = true;
 	        /*this.gameObject.GetComponent<BoxCollider2D>().isTrigger = true;*/

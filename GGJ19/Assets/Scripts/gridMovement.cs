@@ -6,6 +6,8 @@ public class gridMovement : MonoBehaviour {
 	public float speed = 2.0f;
 	public float distance_x;
 	public float distance_y;
+
+
 	public Transform pov;
 	bool interact= false;
 	public float secondi;
@@ -24,17 +26,19 @@ public class gridMovement : MonoBehaviour {
 	public float rayh = 8f;
 	public float rayv = 4;
 
+	danni danno;
+
 	void Start () {
 		pos = transform.position;
      	tr = transform;
 		 lm = LayerMask.NameToLayer("Ostacolo");
 		cont = 0;
-		
+		danno = gameObject.GetComponent<danni>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		Debug.Log(Input.GetAxis("Scossa"));
 		cont=cont + Time.deltaTime;
 		secondipassati+= Time.deltaTime;
 		
@@ -147,8 +151,9 @@ public class gridMovement : MonoBehaviour {
 		        }
 		       // else
         	//danno--;
+			danno.dannoRicevuto();
         }
-    }
+		    }
    /*void OnTriggerExit2D(Collider2D other)
     {
 		        	//Debug.Log("BEH DAI APPOSTO");
